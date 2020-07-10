@@ -16,11 +16,11 @@ $(document).ready(
     $('.burgerWrapperIcons i').on('click',
       function() {
         if (!$(this).hasClass('hidden')) {
-          $('.burgerWrapperMenu').show();
+          $('.burgerWrapperMenu').removeClass('hidden');
           $('.openBurgerMenu').hide();
           $('.closeBurgerMenu').show();
         } else {
-            $('.burgerWrapperMenu').hide();
+            $('.burgerWrapperMenu').addClass('hidden');
             $('.openBurgerMenu').show();
             $('.closeBurgerMenu').hide();
         }
