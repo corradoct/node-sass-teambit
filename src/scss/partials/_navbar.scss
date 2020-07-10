@@ -1,0 +1,91 @@
+/* REGOLE NAV */
+.navbar {
+  height: 8vh;
+  @include display-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $font-primary-color;
+
+  .burgerWrapperIcons i {
+    cursor: pointer;
+  }
+
+  .menuWrapper {
+    display: none;
+
+    .menu {
+      @include display-flex;
+
+      li {
+        padding: 10px 15px;
+
+        &.signUp {
+          width: 120px;
+          border: 1px solid $font-secondary-color;
+          border-radius: 3px;
+          transition: background-color 1s linear;
+
+          &:hover {
+            background-color: $font-secondary-color;
+
+            & a {
+              color: $font-third-color;
+            }
+          }
+
+          & a {
+            color: $font-secondary-color;
+            transition: color 1s linear;
+          }
+
+          & img {
+            width: 20%;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      li.withDropdown {
+        position: relative;
+
+        .dropdown {
+          background-color: $font-third-color;
+          padding: 5px 10px;
+          position: absolute;
+          top: 30px;
+          left: 5px;
+
+          li {
+            padding: 15px 0;
+          }
+        }
+
+        & > a::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f078";
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}
+.burgerMenu li {
+  padding: 15px 0;
+}
+
+/* FINE REGOLE NAV */
+
+/********************   MEDIAQUERYS   ********************/
+
+@media all and (min-width: 769px) {
+  .navbar .menuWrapper {
+    display: block;
+  }
+  .navbar .burgerWrapperIcons {
+    display: none;
+  }
+  .burgerWrapperMenu {
+    display: none;
+  }
+}

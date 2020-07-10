@@ -1,0 +1,33 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FINE RESET */
+
+/* REGOLE GENERALI */
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-primary-color;
+}
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: $font-primary-color;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+/* FINE REGOLE GENERALI */

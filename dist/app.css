@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FINE RESET */
+/* REGOLE GENERALI */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  color: #58402c;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #58402c;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* FINE REGOLE GENERALI */
+/* REGOLE NAV */
+.navbar {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #58402c;
+}
+.navbar .burgerWrapperIcons i {
+  cursor: pointer;
+}
+.navbar .menuWrapper {
+  display: none;
+}
+.navbar .menuWrapper .menu {
+  display: flex;
+}
+.navbar .menuWrapper .menu li {
+  padding: 10px 15px;
+}
+.navbar .menuWrapper .menu li.signUp {
+  width: 120px;
+  border: 1px solid #2c4792;
+  border-radius: 3px;
+  transition: background-color 1s linear;
+}
+.navbar .menuWrapper .menu li.signUp:hover {
+  background-color: #2c4792;
+}
+.navbar .menuWrapper .menu li.signUp:hover a {
+  color: #fff;
+}
+.navbar .menuWrapper .menu li.signUp a {
+  color: #2c4792;
+  transition: color 1s linear;
+}
+.navbar .menuWrapper .menu li.signUp img {
+  width: 20%;
+  vertical-align: middle;
+}
+.navbar .menuWrapper .menu li.withDropdown {
+  position: relative;
+}
+.navbar .menuWrapper .menu li.withDropdown .dropdown {
+  background-color: #fff;
+  padding: 5px 10px;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+.navbar .menuWrapper .menu li.withDropdown .dropdown li {
+  padding: 15px 0;
+}
+.navbar .menuWrapper .menu li.withDropdown > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F078";
+  padding: 0 0 0 10px;
+}
+
+.burgerMenu li {
+  padding: 15px 0;
+}
+
+/* FINE REGOLE NAV */
+/********************   MEDIAQUERYS   ********************/
+@media all and (min-width: 769px) {
+  .navbar .menuWrapper {
+    display: block;
+  }
+
+  .navbar .burgerWrapperIcons {
+    display: none;
+  }
+
+  .burgerWrapperMenu {
+    display: none;
+  }
+}
+/* REGOLE HEADER */
+.headerWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* FINE REGOLE HEADER */
